@@ -1,0 +1,113 @@
+1-9
+linux:
+https://help.ubuntu.com/community/KeyboardShortcuts
+
+
+3-9
+linux:
+sudo fdisk -l
+sudo mount /dev/sdb1 /media/pen
+df (report file system disk space usage)
+ls -sh file_name (list the size of the file in MB)
+sudo shutdown -h now
+
+
+5-9
+linux:
+short the bash prompt:
+PS1='Hello Here: ' (tmp)
+apt-cache policy package-name (whether installed)
+
+
+9-9
+linux:
+synaptic
+mv source/fn1 target/fn2 (move file and rename file(optional))
+
+
+ML:
+PCA
+
+
+tool:
+ffmpeg
+
+spectrogram
+
+
+10-9
+theano:
+http://nbviewer.ipython.org/github/craffel/theano-tutorial/blob/master/Theano%20Tutorial.ipynb
+
+machine learning:
+MLP: http://en.wikipedia.org/wiki/Multilayer_perceptron
+
+
+15-9
+linux:
+deal with the filename having space in cmd line:
+put the filename in quotes
+
+count number of files in a dir:
+ls -1 | wc -l (non recursive)
+find . -type f | wc -l (recursive)
+
+python:
+call external cmd:
+from subprocess import call
+call(["ffmpeg", "-i", "fn1.mp3", "fn2.wav"])
+
+
+16-9
+vim:
+:%s/foo/bar/g (find each occurrence of 'foo' in all lines and replace 
+it with 'bar')
+
+
+python:
+import os 
+for file in os.listdir('/srv/node/4/7digital'):
+
+
+linux:
+du -h dir_name (find dir size)
+
+
+17-9
+python:
+python setup.py install
+
+import time
+start_time = time.time()
+do_it()
+end_time = time.time()
+print end_time - start_time
+
+
+18-9
+python:
+a = np.zeros((m, n))
+a.nbytes
+
+mat = np.loadtxt(fname)
+
+np.save(fname, mat)
+mat = np.load(fname)
+
+
+vim:
+:set shiftwide=4
+:set tabstop=4
+
+
+19-9
+vim:
+0 (beginning of a line)
+G (end of the file)
+H
+M
+L
+
+23-9
+eclipse:
+C+S+/ (toggle "/* */" comments)

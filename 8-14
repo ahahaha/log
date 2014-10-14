@@ -1,0 +1,327 @@
+11-8
+公式推导:LYX latex
+
+13-8
+linux command: 
+lspci
+rm -rf folder_name
+
+15-8
+Ctrl+Alt+T to open terminal
+
+18-8
+python setup.py install
+
+19-8
+sqlite3
+sqlite3 test.db
+.databases
+.tables
+.schema tablename
+
+pdb command
+h
+l
+n
+s
+b line_num
+c
+p
+pp
+q
+python -m pdb myscript.py
+import pdb
+pdb.set_trace()
+
+attention setup.py update
+import py_compile
+py_compile.compile("file.py")
+
+20-8
+Linux command:
+cd ~ (to home)
+cd / (to root)
+man cmd_name
+cat
+
+python 
+how to invoke a funtion of object whose return is a list (may because the parameter is 'self')?
+
+vim:
+autoread :e
+
+f.write() (do not contain \n')
+
+sqlite3:
+delete from table_name;
+
+21-8
+sqlite3:
+select count(distinct col_name) from table_name;
+
+improve effcience
+# sqlite3_exec(db, "PRAGMA synchronous=OFF")
+# sqlite3_exec(db, "PRAGMA count_changes=OFF")
+# sqlite3_exec(db, "PRAGMA journal_mode=MEMORY")
+# sqlite3_exec(db, "PRAGMA temp_store=MEMORY")
+db = sqlite3.connect('/home/smc/Desktop/Grooveshark/gs_data.db')
+cursor = db.cursor()
+cursor.execute("PRAGMA synchronous = OFF")
+
+
+linux command:
+ls -sh filename /The -s is size, the -h is human readable. 
+
+vim
+w   move to beginning of next word
+b   move to beginning of previous word
+e   move to end of word
+
+0   move to beginning of line
+$   move to end of line
+^   move to first non-blank char of the line
+
+gg  move to first line
+G   move to last line
+nG  move to n'th line of file (where n is a number)
+
+H   move to top of screen
+M   move to middle of screen
+L   move to bottom of screen
+
+Ctrl-D  move half-page down
+Ctrl-U  move half-page up
+Ctrl-B  page up
+Ctrl-F  page down
+
+python:
+import sys
+sys.exit([arg])
+
+/0. error
+dict dict.has_key()
+
+
+ipython
+%pdb 
+%run
+
+
+22-8
+com1 209
+
+python:
+import string
+str.lower()
+str.upper()
+
+import time
+time.sleep(seconds)
+
+pdb
+b line_num
+condition bp_num []
+
+
+crawling:
+banned for get too much at one time?
+
+
+23-8
+sqlite:
+ALTER TABLE database_name.table_name ADD COLUMN column_def...;
+PRAGMA table_info(table_name);
+
+insert (insert a row into a table, so 
+
+check null:where some_column is null or some_column = ''
+
+
+python:
+instant print
+skip buffering for a whole python process using "python -u" (or#!/usr/bin/env python -u etc) or by setting the environment variable PYTHONUNBUFFERED.
+
+
+24-8
+python:
+try:
+
+except KeyError:
+
+
+sqlite:
+select col1 from table1, table2 where table1.id = table2.di and ...;
+
+SELECT ID FROM Table1 WHERE ID NOT IN (SELECT ID FROM Table2)
+
+####################
+import sqlite3
+db = sqlite3.connect('/home/smc/Desktop/Grooveshark/gs_data.db')
+cursor = db.cursor()
+
+table_name = 'playlists'
+res = cursor.execute("SELECT * FROM " + table_name + " LIMIT 10;")
+
+for row in res:
+	print(row[1])
+
+# db.commit()
+db.close()
+####################
+
+bitbucket:
+git
+git add file
+git commit -m "msg"
+git push
+
+
+25-8
+python:
+hashlib
+
+import os
+for file in os.listdir("/mydir"):
+    if file.endswith(".txt"):
+        print file
+
+ipython:
+%time
+
+linux:
+ssh
+
+local
+scp user@hostname:/server_path/file_name /local_path/
+
+
+command
+head file_name
+cd ~ (home)
+cd / (root)
+/path (/ start from root)
+
+
+26-8
+python:
+import cProfile
+python -m cProfile myscript.py
+
+from sets import Set
+
+
+understand generator
+
+cur.execute('SELECT * from test;')
+res = cur.fetchall()
+
+for i in range(5):
+	cnt = 0
+	for row in res:
+		if cnt > i:
+			break
+		print(row)
+		cnt += 1
+
+	print()
+
+
+sqlite:
+iteration is much more efficient than select xx from yy where condition?
+
+
+linux
+shell
+C+a (jump to the beginning of a line)
+C+e (jump to then end of a line)
+
+Ctrl + a - Jump to the start of the line
+
+Ctrl + b - Move back a char
+
+Ctrl + c - Terminate the command
+
+Ctrl + d - Delete from under the cursor
+
+Ctrl + e - Jump to the end of the line
+
+Ctrl + f - Move forward a char
+
+Ctrl + k - Delete to EOL
+
+Ctrl + l - Clear the screen
+
+Ctrl + r - Search the history backwards
+
+Ctrl + R - Search the history backwards with multi occurrence
+
+Ctrl + u - Delete backward from cursor
+
+Ctrl + xx - Move between EOL and current cursor position
+
+Ctrl + x @ - Show possible hostname completions
+
+Ctrl + z - Suspend/ Stop the command 
+
+Alt + < - Move to the first line in the history
+
+Alt + > - Move to the last line in the history
+
+Alt + ? - Show current completion list
+
+Alt + * - Insert all possible completions
+
+Alt + / - Attempt to complete filename
+
+Alt + . - Yank last argument to previous command
+
+Alt + b - Move backward
+
+Alt + c - Capitalize the word
+
+Alt + d - Delete word
+
+Alt + f - Move forward
+
+Alt + l - Make word lowercase
+
+Alt + n - Search the history forwards non-incremental
+
+Alt + p - Search the history backwards non-incremental
+
+Alt + r - Recall command
+
+Alt + t - Move words around
+
+Alt + u - Make word uppercase
+
+Alt + backspace - Delete backward from cursor 
+
+
+8-27
+sqlite:
+!!!!!!!!!!!!!!!!!!!!!!!!
+select distinct col1, col2, .. from table_name...
+means (col1, col2, ...) is different from (col1, col2, ...)'
+not distinct col1
+!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+8-28
+python:
+
+try:
+	
+except Exception as e:
+	raise e
+
+triple-quotes strings can serve as multiline comments
+
+
+8-29
+linux:
+paste in the xterm: use middle click or shift+insert
+
+C++:
+int max less than 1e10
+

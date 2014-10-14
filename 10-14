@@ -1,0 +1,74 @@
+1-10
+kill [signal] PID
+top -c -u username (find processes running by particular user)
+grep target_str file
+
+
+13-10
+vim:
+vim -r file_name.swp (recovery)
+
+git:
+git init
+git status
+git add file_name
+git commit -m "msg"
+git add '*.txt'
+git log
+
+git remote add origin URL
+git push -u origin master
+
+git pull origin master ('origin' is the local name of the remote repository)
+git remote rm origin
+git diff HEAD
+git diff --staged
+git reset file_name
+
+git branch b_name (create a new branch)
+git checkout b_name (switch to branch)
+
+git rm '*.txt'
+
+git checkout master
+git merge b_name
+git branch -d b_name
+
+git push
+
+git add -A
+git rm --cached <file> (unstage)
+
+**********************************
+put local git repository to github
+**********************************
+git init
+git add -A
+git commit -m ''
+
+git remote add note URL
+git pull note master
+git push -u note master
+
+git remote show origin (note)
+
+/* add a dir */
+//cd to the dir
+
+linux:
+rmdir dir_name
+
+
+14-10
+C++:
+#include <iomanip>
+setprecision(int n)
+cout << setprecision(10) << x;
+cout << fixed << setprecision(10) << x;
+
+linux:
+mv /path/oldname /path/newname (rename a folder)
+rm !(u|p) (remove all except u and p)
+
+git:
+git config user.name (check user name)
